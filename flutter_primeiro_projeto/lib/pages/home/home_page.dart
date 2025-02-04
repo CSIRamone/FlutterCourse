@@ -6,6 +6,11 @@ import 'package:flutter/material.dart';
     mediaquery,
     layoutbuilder,
     botoesrotacao,
+    scrollssinglechild,
+    listview,
+    dialogs,
+    snackbars,
+    forms,
 
   }
 
@@ -17,7 +22,8 @@ class HomePage extends StatelessWidget {
    Widget build(BuildContext context) {
        return Scaffold(
            appBar: AppBar(
-            backgroundColor: Colors.black38,
+            //backgroundColor: Colors.black38,
+
             title: const Text('Home Page'),
             actions: [
               PopupMenuButton<PopupMenuPages>(
@@ -39,6 +45,21 @@ class HomePage extends StatelessWidget {
                     break;
                     case PopupMenuPages.botoesrotacao:
                       Navigator.of(context).pushNamed('/botoes_rotacao');
+                    break;
+                    case PopupMenuPages.scrollssinglechild:
+                      Navigator.of(context).pushNamed('/scrolls/single_child');
+                    break;
+                    case PopupMenuPages.listview:
+                      Navigator.of(context).pushNamed('/scrolls/list_view');
+                    break;
+                    case PopupMenuPages.dialogs:
+                      Navigator.of(context).pushNamed('/dialogs/dialogs_page');
+                    break;
+                    case PopupMenuPages.snackbars:
+                      Navigator.of(context).pushNamed('/snackbars');
+                    break;
+                    case PopupMenuPages.forms:
+                      Navigator.of(context).pushNamed('/forms');
                     break;
                   }
                 },
@@ -64,10 +85,65 @@ class HomePage extends StatelessWidget {
                     value: PopupMenuPages.botoesrotacao,
                     child: Text('Botoes Rotacao'),
                     ),
+                    const PopupMenuItem<PopupMenuPages>(
+                    value: PopupMenuPages.scrollssinglechild,
+                    child: Text('Scroll SingleChild'),
+                    ),
+                    const PopupMenuItem<PopupMenuPages>(
+                    value: PopupMenuPages.listview,
+                    child: Text('Scroll List View'),
+                    ),
+                    const PopupMenuItem<PopupMenuPages>(
+                    value: PopupMenuPages.dialogs,
+                    child: Text('Dialogs'),
+                    ),
+                    const PopupMenuItem<PopupMenuPages>(
+                    value: PopupMenuPages.snackbars,
+                    child: Text('SnackBars'),
+                    ),
+                    const PopupMenuItem<PopupMenuPages>(
+                    value: PopupMenuPages.forms,
+                    child: Text('Forms'),
+                    ),
                 ];
               })
             ],),
-           body: Container(),
+           body: //Theme(
+            //data: Theme.of(context).copyWith(
+             // primaryColor: Colors.grey,
+            //), 
+            Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: const Text('Botao x'),
+                    ),
+                  Container(
+                    height: 100,
+                    width: 100,
+                    color: Theme.of(context).primaryColorDark,
+                  ),
+                ],
+              ),
+                ),
        );
   }
 }
+
+/*class ContainerX extends StatelessWidget {
+
+  const ContainerX({ Key? key }) : super(key: key);
+
+   @override
+   Widget build(BuildContext context) {
+       return Scaffold(
+           body: Container(
+        height: 100,
+        width: 100,
+        color: Theme.of(context).primaryColorDark,
+      ),
+       );
+  }
+}*/
