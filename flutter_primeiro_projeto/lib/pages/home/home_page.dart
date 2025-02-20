@@ -11,6 +11,13 @@ import 'package:flutter/material.dart';
     dialogs,
     snackbars,
     forms,
+    cidades,
+    stacks,
+    stackpower,
+    bottomnavigatorbar,
+    circleavatar,
+    colors,
+    materialBanner,
 
   }
 
@@ -61,6 +68,27 @@ class HomePage extends StatelessWidget {
                     case PopupMenuPages.forms:
                       Navigator.of(context).pushNamed('/forms');
                     break;
+                    case PopupMenuPages.cidades:
+                      Navigator.of(context).pushNamed('/cidades');
+                    break;
+                    case PopupMenuPages.stacks:
+                      Navigator.of(context).pushNamed('/stacks');
+                    break;
+                    case PopupMenuPages.stackpower:
+                      Navigator.of(context).pushNamed('/stackpower');
+                    break;
+                    case PopupMenuPages.bottomnavigatorbar:
+                      Navigator.of(context).pushNamed('/bottomnavigatorbar');
+                    break;
+                    case PopupMenuPages.circleavatar:
+                      Navigator.of(context).pushNamed('/circleavatar');
+                    break;
+                    case PopupMenuPages.colors:
+                      Navigator.of(context).pushNamed('/colors');
+                    break;
+                    case PopupMenuPages.materialBanner:
+                      Navigator.of(context).pushNamed('/materialBanner');
+                    break;
                   }
                 },
                 itemBuilder: (BuildContext context){
@@ -104,6 +132,34 @@ class HomePage extends StatelessWidget {
                     const PopupMenuItem<PopupMenuPages>(
                     value: PopupMenuPages.forms,
                     child: Text('Forms'),
+                    ),
+                    const PopupMenuItem<PopupMenuPages>(
+                    value: PopupMenuPages.cidades,
+                    child: Text('Cidades'),
+                    ),
+                    const PopupMenuItem<PopupMenuPages>(
+                    value: PopupMenuPages.stacks,
+                    child: Text('Stacks'),
+                    ),
+                    const PopupMenuItem<PopupMenuPages>(
+                    value: PopupMenuPages.stackpower,
+                    child: Text('Stack Power'),
+                    ),
+                    const PopupMenuItem<PopupMenuPages>(
+                    value: PopupMenuPages.bottomnavigatorbar,
+                    child: Text('Bottom Navigator Bar'),
+                    ),
+                    const PopupMenuItem<PopupMenuPages>(
+                    value: PopupMenuPages.circleavatar,
+                    child: Text('Circle Avatar'),
+                    ),
+                    const PopupMenuItem<PopupMenuPages>(
+                    value: PopupMenuPages.colors,
+                    child: Text('Colors'),
+                    ),
+                    const PopupMenuItem<PopupMenuPages>(
+                    value: PopupMenuPages.materialBanner,
+                    child: Text('Material Banner'),
                     ),
                 ];
               })
